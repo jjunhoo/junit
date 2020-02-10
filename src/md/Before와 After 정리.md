@@ -9,9 +9,12 @@
 
 - @After 메소드는 클래스에 있는 각 테스트를 수행한 뒤 실행되며, 테스트가 실패하더라도 실행됨(finally와 비슷)
     -> 예) DB Connection Close()
-    -> @Before createAccount - 1
-       @Test depositIncreasesBalance - 2
-       @After closeConnections - 3
-       @Before createAccount - 1
-       @Test hasPositiveBalance - 2
-       @After closeConnections - 3
+
+    ````java
+    @Before createAccount - 1
+    @Test depositIncreasesBalance - 2
+    @After closeConnections - 3
+    @Before createAccount - 1
+    @Test hasPositiveBalance - 2
+    @After closeConnections - 3
+    ````
